@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		962E420C1A61864200D3CFB0 /* BLCWhiskeyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 962E420B1A61864200D3CFB0 /* BLCWhiskeyViewController.m */; };
 		96AE62DC1A5E35560013EC2E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE62DB1A5E35560013EC2E /* main.m */; };
 		96AE62DF1A5E35560013EC2E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE62DE1A5E35560013EC2E /* AppDelegate.m */; };
 		96AE62E21A5E35560013EC2E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE62E11A5E35560013EC2E /* ViewController.m */; };
-		96AE62E51A5E35560013EC2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96AE62E31A5E35560013EC2E /* Main.storyboard */; };
 		96AE62E71A5E35560013EC2E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96AE62E61A5E35560013EC2E /* Images.xcassets */; };
 		96AE62EA1A5E35560013EC2E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96AE62E81A5E35560013EC2E /* LaunchScreen.xib */; };
 		96AE62F61A5E35560013EC2E /* AlcolatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 96AE62F51A5E35560013EC2E /* AlcolatorTests.m */; };
@@ -27,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		962E420A1A61864200D3CFB0 /* BLCWhiskeyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCWhiskeyViewController.h; sourceTree = "<group>"; };
+		962E420B1A61864200D3CFB0 /* BLCWhiskeyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCWhiskeyViewController.m; sourceTree = "<group>"; };
 		96AE62D61A5E35560013EC2E /* Alcolator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alcolator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96AE62DA1A5E35560013EC2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96AE62DB1A5E35560013EC2E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -34,7 +36,6 @@
 		96AE62DE1A5E35560013EC2E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		96AE62E01A5E35560013EC2E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		96AE62E11A5E35560013EC2E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		96AE62E41A5E35560013EC2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		96AE62E61A5E35560013EC2E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		96AE62E91A5E35560013EC2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		96AE62EF1A5E35560013EC2E /* AlcolatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlcolatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,7 +86,8 @@
 				96AE62DE1A5E35560013EC2E /* AppDelegate.m */,
 				96AE62E01A5E35560013EC2E /* ViewController.h */,
 				96AE62E11A5E35560013EC2E /* ViewController.m */,
-				96AE62E31A5E35560013EC2E /* Main.storyboard */,
+				962E420A1A61864200D3CFB0 /* BLCWhiskeyViewController.h */,
+				962E420B1A61864200D3CFB0 /* BLCWhiskeyViewController.m */,
 				96AE62E61A5E35560013EC2E /* Images.xcassets */,
 				96AE62E81A5E35560013EC2E /* LaunchScreen.xib */,
 				96AE62D91A5E35560013EC2E /* Supporting Files */,
@@ -199,7 +201,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96AE62E51A5E35560013EC2E /* Main.storyboard in Resources */,
 				96AE62EA1A5E35560013EC2E /* LaunchScreen.xib in Resources */,
 				96AE62E71A5E35560013EC2E /* Images.xcassets in Resources */,
 			);
@@ -220,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				96AE62E21A5E35560013EC2E /* ViewController.m in Sources */,
+				962E420C1A61864200D3CFB0 /* BLCWhiskeyViewController.m in Sources */,
 				96AE62DF1A5E35560013EC2E /* AppDelegate.m in Sources */,
 				96AE62DC1A5E35560013EC2E /* main.m in Sources */,
 			);
@@ -244,14 +246,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		96AE62E31A5E35560013EC2E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				96AE62E41A5E35560013EC2E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		96AE62E81A5E35560013EC2E /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -414,6 +408,7 @@
 				96AE62FB1A5E35560013EC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96AE62FC1A5E35560013EC2E /* Build configuration list for PBXNativeTarget "AlcolatorTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +417,7 @@
 				96AE62FE1A5E35560013EC2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
