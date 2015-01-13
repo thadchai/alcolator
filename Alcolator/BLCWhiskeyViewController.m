@@ -41,14 +41,21 @@
     
     NSString *whiskeyText;
     
-    if (numberOfWhiskeyGlassesForEquivalentAlcoholAmount == 1) {
+    if (numberOfWhiskeyGlassesForEquivalentAlcoholAmount <= 1) {
         whiskeyText = NSLocalizedString(@"shot", @"singular shot");
+        self.title = [NSString stringWithFormat:@"Whiskey %.1f shot", numberOfWhiskeyGlassesForEquivalentAlcoholAmount];
     } else {
         whiskeyText = NSLocalizedString(@"shots", @"plural of shot");
+        self.title = [NSString stringWithFormat:@"Whiskey %.1f shots", numberOfWhiskeyGlassesForEquivalentAlcoholAmount];
     }
     
     NSString *resultText = [NSString stringWithFormat:NSLocalizedString(@"%d %@ contains as much alcohol as %.1f %@ of whiskey.", nil), numberOfBeers, beerText, numberOfWhiskeyGlassesForEquivalentAlcoholAmount, whiskeyText];
     self.resultLabel.text = resultText;
+}
+
+- (void) viewDidLoad {
+    [super viewDidLoad];
+    self.title = NSLocalizedString(@"Whiskey", @"whiskey");
 }
 
 @end

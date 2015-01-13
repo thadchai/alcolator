@@ -68,10 +68,12 @@
     
     NSString *wineText;
     
-    if (numberOfWineGlassesForEquivalentAlcoholAmount == 1) {
+    if (numberOfWineGlassesForEquivalentAlcoholAmount <= 1) {
         wineText = NSLocalizedString(@"glass", @"singular glass");
+        self.title = [NSString stringWithFormat:@"Wine %.1f glass", numberOfWineGlassesForEquivalentAlcoholAmount];
     } else {
         wineText = NSLocalizedString(@"glasses", @"plural of glass");
+        self.title = [NSString stringWithFormat:@"Wine %.1f glasses", numberOfWineGlassesForEquivalentAlcoholAmount];
     }
     
     // generate the result text, and display it on the label
@@ -119,6 +121,8 @@
     // This sets our primary view's background color to lightGrayColor
     self.view.backgroundColor = [UIColor whiteColor];
     
+    // This sets the title
+    self.title = NSLocalizedString(@"Wine", @"wine");
     
     // This tells the text field that 'self', this instance of 'BLCViewController' should be treated as the text field's delegate
     self.beerPercentTextField.delegate = self;
@@ -162,7 +166,7 @@
     CGFloat itemWidth = viewWidth - padding - padding;
     CGFloat itemHeight = 44;
 
-    self.beerPercentTextField.frame = CGRectMake(padding, padding, itemWidth, itemHeight);
+    self.beerPercentTextField.frame = CGRectMake(padding, padding * 4, itemWidth, itemHeight);
     
     CGFloat bottomOfTextField = CGRectGetMaxY(self.beerPercentTextField.frame);
     self.beerCountSlider.frame = CGRectMake(padding, bottomOfTextField + padding, itemWidth, itemHeight);
@@ -174,7 +178,8 @@
     
     CGFloat bottomOfLabel = CGRectGetMaxY(self.resultLabel.frame);
     self.calculateButton.frame = CGRectMake(padding, bottomOfLabel + padding, itemWidth, itemHeight);
-    
+ 
+    self.calculateButton.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleBottomMargin;
 }
 
 - (void)didReceiveMemoryWarning {
