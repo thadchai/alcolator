@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol UITabBarControllerDelegate <NSObject>
+
+@optional
+
+@end
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;

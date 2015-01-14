@@ -17,6 +17,19 @@
 
 @implementation ViewController
 
+- (instancetype) init {
+    self = [super init];
+    
+    if (self) {
+        self.title = NSLocalizedString(@"Wine", @"wine");
+        
+        // Since we don't have icons, let's move the title to the middle of the tab bar
+        [self.tabBarItem setTitlePositionAdjustment:UIOffsetMake(0, -18)];
+    }
+    
+    return self;
+}
+
 - (void)textFieldDidChange:(UITextField *)sender {
     // Make sure the text is a number
     NSString *enteredText = sender.text;
@@ -31,6 +44,7 @@
 - (void)sliderValueDidChange:(UISlider *)sender {
     NSLog(@"Slider value changed to %f", sender.value);
     [self.beerPercentTextField resignFirstResponder];
+    [self.tabBarItem setBadgeValue:[NSString stringWithFormat:@"%d", (int) sender.value]];
 }
 
 - (void)buttonPressed:(UIButton *)sender {
@@ -120,9 +134,6 @@
     
     // This sets our primary view's background color to lightGrayColor
     self.view.backgroundColor = [UIColor whiteColor];
-    
-    // This sets the title
-    self.title = NSLocalizedString(@"Wine", @"wine");
     
     // This tells the text field that 'self', this instance of 'BLCViewController' should be treated as the text field's delegate
     self.beerPercentTextField.delegate = self;
